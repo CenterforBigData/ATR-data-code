@@ -18,7 +18,6 @@ Ensure the following Python libraries are installed:
 - `pytorch_forecasting`
 - `pickle`
 - `pathlib`
-- `RobustSTL`
 
 You can install the necessary libraries using pip:
 
@@ -35,7 +34,7 @@ Place the following files in the same directory:
 - `main.py`: Primary execution script.
 - `imports.py`: Contains library imports.
 - `data_preprocessing.py`: Handles data loading and preprocessing.
-- `robust_stl_decomposition.py`: Decomposes the time series using RobustSTL.
+- `RobustSTL.py`: Decomposes the time series using RobustSTL.
 - `dataset_creation.py`: Processes data for model training.
 - `hyperparameter_optimization.py`: Contains the hyperparameter optimization routine.
 - `model_training.py`: Defines and trains the Temporal Fusion Transformer model.
@@ -44,11 +43,8 @@ Place the following files in the same directory:
 ## Running the Project
 
 1. **Data Setup**: Place your data file (e.g., `your file.xlsx`) in the same directory. Adjust paths in `data_preprocessing.py` and `robust_stl_decomposition.py` if needed.
-2. **Time Series Decomposition**: Before running the main model, execute the `robust_stl_decomposition.py` to decompose the original time series:
+2. **Time Series Decomposition**: Before running the main model, execute the `RobustSTL` to decompose the original time series:
 
-```bash
-python robust_stl_decomposition.py
-```
 
 3. **Execute Main Script**: Run the `main.py` script:
 
