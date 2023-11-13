@@ -23,7 +23,7 @@ Ensure the following Python libraries are installed:
 You can install the necessary libraries using pip:
 
 ```bash
-pip install tensorflow tensorboard numpy pandas pytorch_lightning torch pytorch_forecasting RobustSTL
+pip install tensorflow tensorboard numpy pandas pytorch_lightning torch pytorch_forecasting
 ```
 
 Ensure you have a GPU setup for PyTorch, as the project is optimized to run on a GPU for faster training.
