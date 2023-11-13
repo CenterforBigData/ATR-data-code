@@ -51,5 +51,4 @@ python prepare_train_model.py --data_file "path_to_your_data_file.xlsx" --target
 *Note: Similar to the above, you can use the system's Python interpreter or an interpreter from a virtual environment.*
 
 ## Model Output
-The trained model is saved as `tft_model.ckpt`, and the script outputs the forecasted values for the selected target feature.
-
+After training, the model for each component ('Trend', 'Seasonal', 'Resid') is saved as `tft_model.ckpt`, and the script outputs the forecasted values for each component. The final forecast of tourism demand is the sum of these three components.
