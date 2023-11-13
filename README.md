@@ -48,7 +48,7 @@ To train the model with default settings:
 ```
 python prepare_train_model.py --data_file "path_to_your_data_file.xlsx" --target_feature "Trend" --learning_rate 0.01 --hidden_size 128
 ```
-*Note: Similar to the above, you can use the system's Python interpreter or an interpreter from a virtual environment. *
+*Note: Similar to the above, you can use the system's Python interpreter or an interpreter from a virtual environment.*
 *Showing an example on my computer:D:\anaconda3\envs\myenv1\python.exe prepare_train_model.py --data_file "C:/Users/xuyechi/Desktop/科研/tft/夏威夷景区每日客流量（2009年7月至今）.xlsx" --target_feature "Trend" --learning_rate 0.00842077448532244 --hidden_size 125 --gradient_clip_val 0.03911626926390909 --dropout 0.15160823136480017 --hidden_continuous_size 17 --attention_head_size 1*
 
 ## Model Output
