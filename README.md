@@ -18,6 +18,7 @@ Ensure the following Python libraries are installed:
 - `pytorch_forecasting`
 - `pickle`
 - `pathlib`
+- `argparse`
 
 You can install the necessary libraries using pip:
 
@@ -27,29 +28,28 @@ pip install tensorflow tensorboard numpy pandas pytorch_lightning torch pytorch_
 
 Ensure you have a GPU setup for PyTorch, as the project is optimized to run on a GPU for faster training.
 
-## Directory Structure
 
-Place the following files in the same directory:
+## Usage
 
-- `main.py`: Primary execution script.
-- `imports.py`: Contains library imports.
-- `data_preprocessing.py`: Handles data loading and preprocessing.
-- `RobustSTL.py`: Decomposes the time series using RobustSTL.
-- `dataset_creation.py`: Processes data for model training.
-- `hyperparameter_optimization.py`: Contains the hyperparameter optimization routine.
-- `model_training.py`: Defines and trains the Temporal Fusion Transformer model.
-- `model_prediction.py`: Predicts using the trained model.
+### Data Loading and Preprocessing (`data_loader.py`)
+The script is used for loading and preprocessing the dataset, converting columns to appropriate data types.
 
-## Running the Project
+### Model Preparation and Training (`prepare_train_model.py`)
+This script handles feature selection, dataset preparation, optional hyperparameter optimization, and model training.
 
-1. **Data Setup**: Place your data file (e.g., `your file.xlsx`) in the same directory. Adjust paths in `data_preprocessing.py` and `robust_stl_decomposition.py` if needed.
-2. **Time Series Decomposition**: Before running the main model, execute the `RobustSTL` to decompose the original time series:
+**Command-line Arguments:**
+- `--data_file`: Path to your data file.
+- `--target_feature`: Target feature for the model (e.g., 'Trend', 'Seasonal', 'Resid').
+- `--optimize_hyperparameters`: Enable hyperparameter optimization.
+- Additional model hyperparameters (e.g., `--learning_rate`, `--hidden_size` , `gradient_clip_val` , `dropout` , `hidden_continuous_size` , `attention_head_size`).
 
-
-3. **Execute Main Script**: Run the `main.py` script:
-
-```bash
-python main.py
+**Execution Command:**
+To train the model with default settings:
 ```
+python prepare_train_model.py --data_file "path_to_your_data_file.xlsx" --target_feature "Trend"
+```
+*Note: Similar to the above, you can use the system's Python interpreter or an interpreter from a virtual environment.*
 
-4. **Model Output**: The best model will be saved under `saved_models`. Predictions are made using the best model checkpoint.
+## Model Output
+The trained model is saved as `tft_model.ckpt`, and the script outputs the forecasted values for the selected target feature.
+
