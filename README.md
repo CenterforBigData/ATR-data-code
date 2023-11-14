@@ -42,18 +42,10 @@ This project includes three datasets corresponding to different tourist destinat
 ### Hawaii Dataset
 The Hawaii dataset, sourced from [Go Hawaii](https://www.gohawaii.com/), comprises international tourist arrival statistics. It includes features such as date, tourist numbers, and additional external variables that may influence tourism trends. The dataset has undergone preprocessing, including decomposition into 'Trend', 'Seasonal', and 'Resid' components through the RobustSTL model to facilitate more effective training of the forecasting model.
 
-**Sample Features:**
-- `time_idx`: A time index for each entry.
-- `date`: The date of data recording.
-- `tourist`: The count of tourists on the given date.
-- `destination`: The destination name, in this case, Hawaii.
-- `Holiday`: A boolean indicating whether the day is a holiday.
-- `Trend`, `Seasonal`, `Resid`: The components resulting from the RobustSTL decomposition.
-
 ### Jiuzhaigou Dataset
 Data from [Jiuzhaigou Valley](https://www.jiuzhai.com/news/number-of-tourists) include visitor numbers without distinguishing between domestic and international tourists. After forecasting, the sum of the 'Trend', 'Seasonal', and 'Resid' predictions needs to be adjusted by subtracting 6000 to revert the preprocessing step designed to ensure non-negativity.
 
-### Siguniangshan (Four Girls Mountain) Dataset
+### Siguniangshan Dataset
 Similar to Jiuzhaigou, the Siguniangshan dataset, obtained from [Siguniangshan](https://www.sgns.cn/info/number), captures the number of visitors to the Four Girls Mountain area. The final forecast requires a subtraction of 3500 from the sum of the decomposed components after prediction.
 
 ### Preprocessing Steps
