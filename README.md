@@ -43,6 +43,19 @@ After decomposing the data with RobustSTL, the `data_loader.py` script loads and
 ### Model Preparation and Training (`prepare_train_model.py`)
 This script handles feature selection, dataset preparation, optional hyperparameter optimization, and model training.
 
+**Key Configurations:**
+- `max_prediction_length` and `max_encoder_length`: Specify the prediction length and the length of historical data used for predictions, respectively. In this project, we use data from the past 30 days (`max_encoder_length = 30`) to forecast the next 3 days (`max_prediction_length = 3`).
+
+- `training = TimeSeriesDataSet(...)`: Configures the dataset for training with specific features and parameters. Key parameters include:
+  - `time_varying_known_categoricals`: Categorical variables known throughout the dataset, such as 'month', 'day of the week', etc.
+  - `time_varying_known_reals`: Continuous variables known in the past and future, like 'time_idx'.
+  - `time_varying_unknown_reals`: Continuous variables known only in the past, including the target feature set via `args.target_feature`.
+  - `group_ids`: Identifiers for each time series in the dataset. For instance, 'destination' could be a grouping identifier in a tourism dataset.
+  - `target`: The target variable to predict, defined by `args.target_feature`.
+  - `target_normalizer`: Applies a normalization method (like 'softplus') to the target variable, beneficial for stabilizing training.
+
+Users can modify these configurations in the script to adapt the model to different forecasting scenarios and datasets.
+
 **Command-line Arguments:**
 - `--data_file`: Path to your data file.
 - `--target_feature`: Target feature for the model (e.g., 'Trend', 'Seasonal', 'Resid').
