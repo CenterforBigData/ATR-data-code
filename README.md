@@ -35,6 +35,33 @@ Ensure you have a GPU setup for PyTorch, as the project is optimized to run on a
 
 Before using the TFT model, the dataset undergoes a decomposition process using the RobustSTL model. This step involves splitting the 'tourist' column into three components: 'Trend', 'Seasonal', and 'Resid'. The sum of these components reconstructs the original 'tourist' data.
 
+## Datasets
+
+This project includes three datasets corresponding to different tourist destinations, each with unique characteristics and preprocessing steps. Below is an overview of each dataset:
+
+### Hawaii Dataset
+The Hawaii dataset, sourced from [Go Hawaii](https://www.gohawaii.com/), comprises international tourist arrival statistics. It includes features such as date, tourist numbers, and additional external variables that may influence tourism trends. The dataset has undergone preprocessing, including decomposition into 'Trend', 'Seasonal', and 'Resid' components through the RobustSTL model to facilitate more effective training of the forecasting model.
+
+**Sample Features:**
+- `time_idx`: A time index for each entry.
+- `date`: The date of data recording.
+- `tourist`: The count of tourists on the given date.
+- `destination`: The destination name, in this case, Hawaii.
+- `Holiday`: A boolean indicating whether the day is a holiday.
+- `Trend`, `Seasonal`, `Resid`: The components resulting from the RobustSTL decomposition.
+
+### Jiuzhaigou Dataset
+Data from [Jiuzhaigou Valley](https://www.jiuzhai.com/news/number-of-tourists) include visitor numbers without distinguishing between domestic and international tourists. After forecasting, the sum of the 'Trend', 'Seasonal', and 'Resid' predictions needs to be adjusted by subtracting 6000 to revert the preprocessing step designed to ensure non-negativity.
+
+### Siguniangshan (Four Girls Mountain) Dataset
+Similar to Jiuzhaigou, the Siguniangshan dataset, obtained from [Siguniangshan](https://www.sgns.cn/info/number), captures the number of visitors to the Four Girls Mountain area. The final forecast requires a subtraction of 3500 from the sum of the decomposed components after prediction.
+
+### Preprocessing Steps
+All datasets have been enhanced with external variables and decomposed using RobustSTL for an optimized forecasting process. The 'Trend', 'Seasonal', and 'Resid' components have been adjusted to facilitate better model training. The datasets are ready to be loaded using the `data_loader.py` script, and subsequent forecasting tasks can be performed with `prepare_train_model.py`, taking into account the specific adjustments mentioned for Jiuzhaigou and Siguniangshan datasets.
+
+**Note:** The examples provided in this project use the Hawaii dataset for experimental demonstrations.
+
+
 ## Usage
 
 ### Data Loading and Preprocessing (`data_loader.py`)
