@@ -46,7 +46,7 @@ Before using the TFT model, the dataset undergoes a decomposition process using 
 This project includes three datasets corresponding to different tourist destinations, each with unique characteristics and preprocessing steps. Below is an overview of each dataset:
 
 ### Hawaii Dataset
-The Hawaii dataset, sourced from [Go Hawaii](https://www.gohawaii.com/), comprises international tourist arrival statistics. It includes features such as date, tourist numbers, and additional external variables that may influence tourism trends. The dataset has undergone preprocessing, including decomposition into 'Trend', 'Seasonal', and 'Resid' components through the RobustSTL model to facilitate more effective training of the forecasting model.
+The Hawaii dataset, sourced from [Go Hawaii](https://www.gohawaii.com/), comprises both international and domestic (U.S.) tourist arrival statistics. It includes features such as date, tourist numbers, and additional external variables that may influence tourism trends. The dataset has undergone preprocessing, including decomposition into 'Trend', 'Seasonal', and 'Resid' components through the RobustSTL model to facilitate more effective training of the forecasting model.
 
 ### Jiuzhaigou Dataset
 Data from [Jiuzhaigou Valley](https://www.jiuzhai.com/news/number-of-tourists) include visitor numbers without distinguishing between domestic and international tourists. After forecasting, the sum of the 'Trend', 'Seasonal', and 'Resid' predictions needs to be adjusted by subtracting 6000 to revert the preprocessing step designed to ensure non-negativity.
