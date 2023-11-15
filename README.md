@@ -31,12 +31,6 @@ pip install tensorflow tensorboard numpy pandas pytorch_lightning torch pytorch_
 
 Ensure you have a GPU setup for PyTorch, as the project is optimized to run on a GPU for faster training.
 
-Before running the Python scripts, ensure that you navigate to the directory where the scripts are located. Use the `cd` command in your terminal or command prompt to change to the correct directory.
-```
-cd path_to_your_scripts_directory
-```
-Replace `path_to_your_scripts_directory` with the actual path to your scripts.
-
 ## Running the Experiments
 
 We have provided a Jupyter Notebook `run_example.ipynb` that demonstrates a complete experiment on the Hawaii dataset, forecasting the next 3 days. This notebook includes a detailed and clear experimental process along with annotated code to guide you through the steps taken.
@@ -67,6 +61,12 @@ All datasets have been enhanced with external variables and decomposed using Rob
 
 
 ## Usage
+
+Before running the Python scripts, ensure that you navigate to the directory where the scripts are located. Use the `cd` command in your terminal or command prompt to change to the correct directory.
+```
+cd path_to_your_scripts_directory
+```
+Replace `path_to_your_scripts_directory` with the actual path to your scripts.
 
 ### Data Loading and Preprocessing (`data_loader.py`)
 After decomposing the data with RobustSTL, the `data_loader.py` script loads and preprocesses the dataset.
