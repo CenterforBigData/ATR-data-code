@@ -31,6 +31,18 @@ pip install tensorflow tensorboard numpy pandas pytorch_lightning torch pytorch_
 
 Ensure you have a GPU setup for PyTorch, as the project is optimized to run on a GPU for faster training.
 
+Before running the Python scripts, ensure that you navigate to the directory where the scripts are located. Use the `cd` command in your terminal or command prompt to change to the correct directory.
+```
+cd path_to_your_scripts_directory
+```
+Replace `path_to_your_scripts_directory` with the actual path to your scripts.
+
+## Running the Experiments
+
+We have provided a Jupyter Notebook `run_example.ipynb` that demonstrates a complete experiment on the Hawaii dataset, forecasting the next 3 days. This notebook includes a detailed and clear experimental process along with annotated code to guide you through the steps taken.
+
+To gain a clearer and more detailed understanding of the experimental procedure, please refer to the `run_example.ipynb` file. It contains the full end-to-end process starting from data loading, preprocessing, model training, forecasting, and finally evaluating the performance of the forecasts.
+
 ## Preprocessing with RobustSTL
 
 Before using the TFT model, the dataset undergoes a decomposition process using the RobustSTL model. This step involves splitting the 'tourist' column into three components: 'Trend', 'Seasonal', and 'Resid'. The sum of these components reconstructs the original 'tourist' data.
