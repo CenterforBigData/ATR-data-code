@@ -68,19 +68,3 @@ Within the `run_example` folder, we have included Jupyter Notebooks that detail 
 To gain a clearer and more detailed understanding of the experimental procedure, please refer to the `run_example_hawaii.ipynb` file. It contains the full end-to-end process starting from data loading, preprocessing, model training, forecasting, and finally evaluating the performance of the forecasts.
 
 By using these pretrained models, you can achieve the forecast accuracy and results presented in our paper without the need to retrain the models from scratch.
-
-
-## Datasets Overview
-
-1. **Hawaii Dataset:** 
-   - Statistics on both international and domestic (U.S.) tourist arrivals.
-   - Includes date, tourist numbers, and external variables.
-   - Preprocessed with RobustSTL model into 'Trend', 'Seasonal', and 'Resid' components.
-
-2. **Jiuzhaigou Dataset:**
-   - Records visitor numbers without differentiating between domestic and international tourists.
-   - Post-forecasting adjustment: subtract 6000 to revert preprocessing step.
-
-3. **Siguniangshan Dataset:**
-   - Tracks visitor numbers to the Four Girls Mountain area.
-   - After forecasting, adjust the final figure by subtracting 3500 from the decomposed components.
