@@ -38,9 +38,9 @@ The hyperparameter summary can be found in the `dataset` folder, under the name 
 
 By exploring `hyperparameters_summary.xlsx`, you can get insights into how the models were fine-tuned for each specific forecasting horizon. This information could serve as a starting point for your model tuning or as a benchmark for further experimentation.
 
-For the preparation and training of the model, we have outlined the key configurations in the `Key Configurations.txt` file. This file includes essential parameters such as `max_prediction_length`, `max_encoder_length`, and various settings for the `TimeSeriesDataSet` configuration. These parameters are crucial in determining the model's behavior for different forecasting scenarios.
+For the preparation and training of the model, we have outlined the key configurations in the `keyconfigurations.txt` file. This file includes essential parameters such as `max_prediction_length`, `max_encoder_length`, and various settings for the `TimeSeriesDataSet` configuration. These parameters are crucial in determining the model's behavior for different forecasting scenarios.
 
-Users are encouraged to refer to the `Key Configurations.txt` file for a comprehensive understanding of these settings. You can modify these configurations in the script to adapt the model to different forecasting scenarios and datasets, ensuring flexibility and adaptability for your specific needs.
+Users are encouraged to refer to the `keyconfigurations.txt` file for a comprehensive understanding of these settings. You can modify these configurations in the script to adapt the model to different forecasting scenarios and datasets, ensuring flexibility and adaptability for your specific needs.
 
 **Command-line Arguments:**
 - `--data_file`: Path to your data file.
@@ -70,20 +70,17 @@ To gain a clearer and more detailed understanding of the experimental procedure,
 By using these pretrained models, you can achieve the forecast accuracy and results presented in our paper without the need to retrain the models from scratch.
 
 
-## Datasets
+## Datasets Overview
 
-This project includes three datasets corresponding to different tourist destinations, each with unique characteristics and preprocessing steps. Below is an overview of each dataset:
+1. **Hawaii Dataset:** 
+   - Statistics on both international and domestic (U.S.) tourist arrivals.
+   - Includes date, tourist numbers, and external variables.
+   - Preprocessed with RobustSTL model into 'Trend', 'Seasonal', and 'Resid' components.
 
-### Hawaii Dataset
-The Hawaii dataset, sourced from [Go Hawaii](https://www.gohawaii.com/), comprises both international and domestic (U.S.) tourist arrival statistics. It includes features such as date, tourist numbers, and additional external variables that may influence tourism trends. The dataset has undergone preprocessing, including decomposition into 'Trend', 'Seasonal', and 'Resid' components through the RobustSTL model to facilitate more effective training of the forecasting model.
+2. **Jiuzhaigou Dataset:**
+   - Records visitor numbers without differentiating between domestic and international tourists.
+   - Post-forecasting adjustment: subtract 6000 to revert preprocessing step.
 
-### Jiuzhaigou Dataset
-Data from [Jiuzhaigou Valley](https://www.jiuzhai.com/news/number-of-tourists) include visitor numbers without distinguishing between domestic and international tourists. After forecasting, the sum of the 'Trend', 'Seasonal', and 'Resid' predictions needs to be adjusted by subtracting 6000 to revert the preprocessing step designed to ensure non-negativity.
-
-### Siguniangshan Dataset
-Similar to Jiuzhaigou, the Siguniangshan dataset, obtained from [Siguniangshan](https://www.sgns.cn/info/number), captures the number of visitors to the Four Girls Mountain area. The final forecast requires a subtraction of 3500 from the sum of the decomposed components after prediction.
-
-### Preprocessing Steps
-All datasets have been enhanced with external variables and decomposed using RobustSTL for an optimized forecasting process. The 'Trend', 'Seasonal', and 'Resid' components have been adjusted to facilitate better model training. The datasets are ready to be loaded using the `data_loader.py` script, and subsequent forecasting tasks can be performed with `prepare_train_model.py`, taking into account the specific adjustments mentioned for Jiuzhaigou and Siguniangshan datasets.
-
-**Note:** The examples provided in this project use the Hawaii dataset for experimental demonstrations.
+3. **Siguniangshan Dataset:**
+   - Tracks visitor numbers to the Four Girls Mountain area.
+   - After forecasting, adjust the final figure by subtracting 3500 from the decomposed components.
