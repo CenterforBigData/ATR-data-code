@@ -18,7 +18,7 @@ pip install -r requirements.txt
 This command will automatically install the libraries listed in the requirements.txt file. Ensure you have a GPU setup for PyTorch, as the project is optimized to run on a GPU for faster training.
 
 ### 2. Prepare Data
-The datasets have been pre-processed and are ready to use. You can find them in the `dataset` folder. All datasets have been enhanced with external variables and decomposed using RobustSTL for an optimized forecasting process. The 'Trend', 'Seasonal', and 'Resid' components have been adjusted to facilitate better model training. Here is a summary of datasets. 
+The datasets have been pre-processed and are ready to use. You can find them in the `Datasets` folder. All datasets have been enhanced with external variables and decomposed using RobustSTL for an optimized forecasting process. The 'Trend', 'Seasonal', and 'Resid' components have been adjusted to facilitate better model training. Here is a summary of datasets. 
 
 
 The datasets are ready to be loaded using the `data_loader.py` script.
