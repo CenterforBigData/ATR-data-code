@@ -60,13 +60,13 @@ python prepare_train_model.py --data_file "path_to_your_data_file.xlsx" --target
 
 After training, the model for each component ('Trend', 'Seasonal', 'Resid') is saved as `tft_model.ckpt`, and the script outputs the forecasted values for each component. The final forecast of tourism demand is the sum of these three components.
 
-### 5. Example Run
+### 5. Forecasting Tutorials
 
-Within the `run_example` folder, we have included Jupyter Notebooks that detail complete forecasting experiments conducted on the Hawaii, Jiuzhaigou, and Siguniangshan datasets, forecasting the next 3 days. To replicate these experiments, ensure you download all contents within this folder. Each notebook corresponds to a specific dataset and is named for clarity:
+Within the `forecasting_tutorials` folder, we have included Jupyter Notebooks that detail complete forecasting experiments conducted on the Hawaii, Jiuzhaigou, and Siguniangshan datasets, forecasting the next 3 days. To replicate these experiments, ensure you download all contents within this folder. Each notebook corresponds to a specific dataset and is named for clarity:
 
-- `run_example_hawaii.ipynb`
-- `run_example_jiuzhaigou.ipynb`
-- `run_example_siguniang.ipynb`
+- `forecast_tutorial_hawaii_3day.ipynb`
+- `forecast_tutorial_jiuzhaigou_3day.ipynb`
+- `forecast_tutorial_siguniangshan_3day.ipynb`
 
 To gain a clearer and more detailed understanding of the experimental procedure, please refer to the `run_example_hawaii.ipynb` file. It contains the full end-to-end process starting from data loading, preprocessing, model training, forecasting, and finally evaluating the performance of the forecasts.
 
