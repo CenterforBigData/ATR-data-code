@@ -68,6 +68,6 @@ Within the `forecasting_tutorials` folder, we have included Jupyter Notebooks th
 - `forecast_tutorial_jiuzhaigou_3day.ipynb`
 - `forecast_tutorial_siguniangshan_3day.ipynb`
 
-To gain a clearer and more detailed understanding of the experimental procedure, please refer to the `run_example_hawaii.ipynb` file. It contains the full end-to-end process starting from data loading, preprocessing, model training, forecasting, and finally evaluating the performance of the forecasts.
+To gain a clearer and more detailed understanding of the experimental procedure, please refer to the `forecast_tutorial_hawaii_3day.ipynb` file. It contains the full end-to-end process starting from data loading, preprocessing, model training, forecasting, and finally evaluating the performance of the forecasts.
 
 By using these pretrained models, you can achieve the forecast accuracy and results presented in our paper without the need to retrain the models from scratch.
