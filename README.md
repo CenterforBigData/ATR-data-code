@@ -20,7 +20,6 @@ This command will automatically install the libraries listed in the requirements
 ### 2. Prepare Data
 The datasets have been pre-processed and are ready to use. You can find them in the `dataset` folder. All datasets have been enhanced with external variables and decomposed using RobustSTL for an optimized forecasting process. The 'Trend', 'Seasonal', and 'Resid' components have been adjusted to facilitate better model training. Here is a summary of datasets. 
 
-![datasets](./pic/datasets.png)
 
 The datasets are ready to be loaded using the `data_loader.py` script.
 
