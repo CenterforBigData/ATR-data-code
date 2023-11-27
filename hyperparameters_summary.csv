@@ -1,0 +1,23 @@
+﻿For Hawaii dataset,,,,,,
+Prediction Length,gradient_clip_val,hidden_size,dropout,hidden_continuous_size,attention_head_size,learning_rate
+1,0.0814,16,0.1335,11,1,0.0887
+3,0.0391,125,0.1516,17,1,0.0084
+7,0.4575,13,0.1021,8,3,0.0222
+15,0.4298,52,0.1102,18,2,0.0829
+30,0.509,98,0.2482,57,1,0.0165
+,,,,,,
+For Jiuzhaigou datast,,,,,,
+Prediction Length,gradient_clip_val,hidden_size,dropout,hidden_continuous_size,attention_head_size,learning_rate
+1,0.2586,75,0.1495,50,4,0.0248
+3,0.7394,69,0.1687,43,3,0.0554
+7,0.1461,54,0.1792,36,1,0.0145
+15,0.0484,79,0.2292,17,3,0.0773
+30,0.0364,19,0.162,9,1,0.0282
+,,,,,,
+For Mount Siguniang datast,,,,,,
+Prediction Length,gradient_clip_val,hidden_size,dropout,hidden_continuous_size,attention_head_size,learning_rate
+1,0.6377,20,0.1714,9,2,0.0636
+3,0.0894,82,0.1962,39,1,0.0294
+7,0.0227,23,0.1379,12,2,0.0276
+15,0.0876,17,0.2097,11,3,0.046
+30,0.1884,57,0.2336,40,1,0.0428
