@@ -1,6 +1,0 @@
-﻿Prediction Length,gradient_clip_val,hidden_size,dropout,hidden_continuous_size,attention_head_size,learning_rate
-1,0.0814,16,0.1335,11,1,0.0887
-3,0.0391,125,0.1516,17,1,0.0084
-7,0.4575,13,0.1021,8,3,0.0222
-15,0.4298,52,0.1102,18,2,0.0829
-30,0.509,98,0.2482,57,1,0.0165
