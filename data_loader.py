@@ -23,6 +23,13 @@ def load_data(filepath):
     """
     try:
         data = pd.read_excel(filepath)
+        
+        # Check for missing values in 'tourist' column
+        if data['tourist'].isnull().any():
+            print("Missing values found in 'tourist' column. Applying KNN imputation.")
+            imputer = KNNImputer(n_neighbors=5)  # Adjust 'n_neighbors' as needed
+            data['tourist'] = imputer.fit_transform(data[['tourist']]).ravel()
+
         # Convert columns to appropriate data types
         data["year"] = data["year"].astype(str)
         data["day"] = data["day"].astype(str)
