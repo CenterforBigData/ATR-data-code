@@ -7,5 +7,5 @@ For the Jiuzhaigou dataset, it encompasses a diverse array of fields such as `da
 ![Jiuzhaigou Image](https://github.com/CenterforBigData/TPE-RobustSTL-TFT/blob/main/Datasets/pic/Jiuzhaigou.png)
 
 For the Mount Siguniang dataset, it comprises a comprehensive range of fields including `date`, `tourist numbers`, `pc_Siguniang`, `mob_Siguniang`, `pc_SichuanEpidemic`, `mob_SichuanEpidemic`, `time_idx`, and temporal indicators like `weekday`, `year`, `month`, `day`, and `destination`. Additionally, it includes analytic components such as `trend`, `seasonal`, and `residual factors`, providing a holistic view of the tourism dynamics specific to Mount Siguniang.
-![Mount Siguniang Image](https://github.com/CenterforBigData/TPE-RobustSTL-TFT/blob/main/Datasets/pic/Mount Siguniang.png)
+![Mount Siguniang Image](https://github.com/CenterforBigData/TPE-RobustSTL-TFT/blob/main/Datasets/pic/MountSiguniang.png)
 
