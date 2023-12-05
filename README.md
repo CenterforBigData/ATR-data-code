@@ -22,7 +22,7 @@ cd path_to_your_scripts_directory
 Replace `path_to_your_scripts_directory` with the actual path to your scripts.
 
 ### 2. Prepare Data
-The datasets have been pre-processed and are ready to use. You can find them in the `Datasets` folder. While these datasets are prepared for immediate use, you have the option to reprocess them or use your own dataset with the help of the `data_loader.py` script. This script is designed to load data from an Excel file, apply necessary preprocessing, and save the processed data to a specified output file. If you wish to use our pre-processed datasets directly, please proceed to step 4, "Train and Evaluate the Model."
+The datasets have been pre-processed and are ready to use. You can find them in the `Datasets` folder. While these datasets are prepared for immediate use, you have the option to reprocess them or use your own dataset with the help of the `data_loader.py` script. This script is designed to load data from an Excel file, apply necessary preprocessing, and save the processed data to a specified output file. *If you wish to use our pre-processed datasets directly, please proceed to step 4, "Train and Evaluate the Model."*
 
 To use `data_loader.py`:
 ```
