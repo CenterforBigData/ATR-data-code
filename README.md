@@ -44,9 +44,9 @@ Additionally, for a more illustrative and interactive demonstration of the decom
 ### 4. Hyperparameter Optimization Using Tree-structured Parzen Estimator (TPE)
 The `optimize_hyperparams.py` script automates the process of finding the best hyperparameters for the Temporal Fusion Transformer model. It utilizes the Tree-structured Parzen Estimator (TPE) algorithm, a sophisticated approach for hyperparameter tuning that efficiently searches the hyperparameter space.
 
-We have already conducted extensive hyperparameter optimization and stored the optimal settings in the `hyperparameters` folder. You can choose to use these pre-selected hyperparameters for immediate model training and evaluation. ***If you wish to skip straight to model training using our recommended settings, please proceed to step 5 of the documentation. The scripts provided in this GitHub repository are primarily developed based on the Hawaii dataset. Therefore, if you intend to use either the Jiuzhaigou or Siguniangshan datasets, or your own custom dataset, and wish to conduct your own hyperparameter optimization, it is essential to appropriately adjust the input variables in the `TimeSeriesDataSet` on line 21 of the `optimize_hyperparams.py` script to match your dataset's specific requirements.***
+We have already conducted extensive hyperparameter optimization and stored the optimal settings in the `hyperparameters` folder. You can choose to use these pre-selected hyperparameters for immediate model training and evaluation. ***If you wish to skip straight to model training using our recommended settings, please proceed to step 5 of the documentation. The scripts provided in this GitHub repository are primarily developed based on the Hawaii dataset. Therefore, if you intend to use either the Jiuzhaigou or Siguniangshan datasets, or your own custom dataset, it is essential to appropriately adjust the input variables in the `TimeSeriesDataSet` on line 21 of the `optimize_hyperparams.py` script to match your dataset's specific requirements.***
 
-If you prefer to run hyperparameter optimization, execute the script with the following command:
+To run hyperparameter optimization, execute the script with the following command:
 
 ```bash
 python optimize_hyperparams.py --data_file "path_to_your_data_file.xlsx" --target_feature "Trend" --optimize_hyperparameters
