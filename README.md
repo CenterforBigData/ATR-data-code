@@ -31,7 +31,15 @@ python data_loader.py path_to_your_input_data_file.xlsx path_to_your_output_data
 Replace path_to_your_input_data_file.xlsx with the path to your input Excel file, and path_to_your_output_data_file.xlsx with the desired path for the output Excel file. 
 
 ### 3. Decomposition with RobustSTL
-Before training the TFT model, the dataset should be pre-processed using the RobustSTL decomposition model. This involves breaking down the 'tourist' column into three components: 'Trend', 'Seasonal', and 'Resid'. These components, when summed, reconstruct the original 'tourist' data. If you are working with your own dataset, please apply the RobustSTL decomposition in this step to prepare your data accordingly.
+Before training the TFT model, the dataset should be pre-processed using the RobustSTL decomposition model. This involves breaking down the 'tourist' column into three components: 'Trend', 'Seasonal', and 'Resid'. These components, when summed, reconstruct the original 'tourist' data. The entire decomposition process is encapsulated in the `RobustSTL` folder. ***If you are working with your own dataset, please apply the RobustSTL decomposition in this step to prepare your data accordingly.***
+
+Within this folder, the `main.py` file is the primary script for executing the decomposition. To use this script, run the following command line:
+```
+python script.py --input_file "path_to_your_data_file.xlsx" --output_file "decomposed_output.xlsx" --season_len 50 --reg1 10 --reg2 0.5 --K 3 --H 5 --ds1 10 --ds2 0.5
+```
+The arguments can be found in the `decomposition_configurations.txt` file within the same folder. 
+
+Additionally, for a more illustrative and interactive demonstration of the decomposition process, we have included a Jupyter notebook file named `decomposition_example.ipynb` in the `RobustSTL` folder. This notebook provides a step-by-step walkthrough of the decomposition, making it easier to understand and visualize the process.
 
 ### 4. Train and Evaluate the Model
 Use the prepare_train_model.py script to configure the model with specific features, hyperparameters, and training settings. 
