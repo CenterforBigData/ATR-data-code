@@ -33,7 +33,8 @@ def load_data(filepath):
         # Convert columns to appropriate data types
         data["year"] = data["year"].astype(str)
         data["day"] = data["day"].astype(str)
-        data['Holiday'] = data['Holiday'].astype(str)
+        if 'Holiday' in data.columns:
+            data['Holiday'] = data['Holiday'].astype(str)
         data["tourist"] = data["tourist"].astype("float64")
         data["Trend"]=data["Trend"].astype("float64")
         data["Seasonal"]=data["Seasonal"].astype("float64")
