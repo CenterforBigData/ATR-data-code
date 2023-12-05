@@ -35,6 +35,18 @@ def load_data(filepath):
         data["day"] = data["day"].astype(str)
         if 'Holiday' in data.columns:
             data['Holiday'] = data['Holiday'].astype(str)
+        if 'pc_Jiuzhaigou' in data.columns:
+            data["pc_Jiuzhaigou"] = data["pc_Jiuzhaigou"].astype("float64")
+        if 'mob_Jiuzhaigou' in data.columns:
+            data["mob_Jiuzhaigou"] = data["mob_Jiuzhaigou"].astype("float64")
+        if 'pc_SichuanEpidemic' in data.columns:    
+            data["pc_SichuanEpidemic"] = data["pc_SichuanEpidemic"].astype("float64")
+        if 'mob_SichuanEpidemic' in data.columns:    
+            data["mob_SichuanEpidemic"] = data["mob_SichuanEpidemic"].astype("float64")
+        if 'pc_Jiuzhaigou' in data.columns:
+            data["pc_Siguniang"] = data["pc_Siguniang"].astype("float64")
+        if 'pc_Jiuzhaigou' in data.columns:
+            data["mob_Siguniang"] = data["mob_Siguniang"].astype("float64")
         data["tourist"] = data["tourist"].astype("float64")
         data["Trend"]=data["Trend"].astype("float64")
         data["Seasonal"]=data["Seasonal"].astype("float64")
