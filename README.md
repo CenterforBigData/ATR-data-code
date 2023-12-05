@@ -15,17 +15,19 @@ pip install -r requirements.txt
 
 This command will automatically install the libraries listed in the requirements.txt file. Ensure you have a GPU setup for PyTorch, as the project is optimized to run on a GPU for faster training.
 
+Before running the Python scripts, ensure that you navigate to the directory where the scripts are located. Use the `cd` command in your terminal or command prompt to change to the correct directory.
+```
+cd path_to_your_scripts_directory
+```
+Replace `path_to_your_scripts_directory` with the actual path to your scripts.
+
 ### 2. Prepare Data
 The datasets have been pre-processed and are ready to use. You can find them in the `Datasets` folder. All datasets have been enhanced with external variables and decomposed using RobustSTL for an optimized forecasting process. The 'Trend', 'Seasonal', and 'Resid' components have been adjusted to facilitate better model training. Here is a summary of datasets. 
 
 
 The datasets are ready to be loaded using the `data_loader.py` script.
 
-Before running the Python scripts, ensure that you navigate to the directory where the scripts are located. Use the `cd` command in your terminal or command prompt to change to the correct directory.
-```
-cd path_to_your_scripts_directory
-```
-Replace `path_to_your_scripts_directory` with the actual path to your scripts.
+
 
 ### 3. Decomposition with RobustSTL
 Before training the TFT model, the dataset should be pre-processed using the RobustSTL decomposition model. This involves breaking down the 'tourist' column into three components: 'Trend', 'Seasonal', and 'Resid'. These components, when summed, reconstruct the original 'tourist' data. If you are working with your own dataset, please apply the RobustSTL decomposition in this step to prepare your data accordingly.
