@@ -41,7 +41,9 @@ The arguments can be found in the `decomposition_configurations.txt` file within
 
 Additionally, for a more illustrative and interactive demonstration of the decomposition process, we have included a Jupyter notebook file named `decomposition_example.ipynb` in the `RobustSTL` folder. This notebook provides a step-by-step walkthrough of the decomposition, making it easier to understand and visualize the process.
 
-### 4. Train and Evaluate the Model
+### 4. Decomposition with RobustSTL
+
+### 5. Train and Evaluate the Model
 Use the prepare_train_model.py script to configure the model with specific features, hyperparameters, and training settings. 
 
 For your convenience, we have compiled a summary of the hyperparameters used for different prediction lengths across all datasets. This comprehensive overview allows you to understand the model configurations that were utilized to achieve the best forecasting results.
@@ -69,7 +71,7 @@ python prepare_train_model.py --data_file "path_to_your_data_file.xlsx" --target
 
 After training, the model for each component ('Trend', 'Seasonal', 'Resid') is saved as `tft_model.ckpt`, and the script outputs the forecasted values for each component. The final forecast of tourism demand is the sum of these three components.
 
-### 5. Forecasting Tutorials
+### 6. Forecasting Tutorials
 
 Within the `forecasting_tutorials` folder, we have included Jupyter Notebooks that detail complete forecasting experiments conducted on the Hawaii, Jiuzhaigou, and Siguniangshan datasets, forecasting the next 3 days. To replicate these experiments, ensure you download all contents within this folder. Each notebook corresponds to a specific dataset and is named for clarity:
 
