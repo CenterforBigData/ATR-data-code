@@ -22,9 +22,9 @@ cd path_to_your_scripts_directory
 Replace `path_to_your_scripts_directory` with the actual path to your scripts.
 
 ### 2. Prepare Data
-The datasets have been pre-processed and are ready to use. You can find them in the `Datasets` folder. All datasets have been enhanced with external variables and decomposed using RobustSTL for an optimized forecasting process. The 'Trend', 'Seasonal', and 'Resid' components have been adjusted to facilitate better model training.
+The datasets have been pre-processed and are ready to use. You can find them in the `Datasets` folder. While these datasets are prepared for immediate use, you have the option to reprocess them or use your own dataset with the help of the `data_loader.py` script. This script is designed to load data from an Excel file, apply necessary preprocessing, and save the processed data to a specified output file.
 
-The datasets are ready to be loaded using the `data_loader.py` script. This script will load the data, apply preprocessing, and save the processed data to the specified output file.To use `data_loader.py`:
+To use `data_loader.py`:
 ```
 python data_loader.py path_to_your_input_data_file.xlsx path_to_your_output_data_file.xlsx
 ```
