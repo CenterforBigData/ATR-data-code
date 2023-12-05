@@ -22,12 +22,13 @@ cd path_to_your_scripts_directory
 Replace `path_to_your_scripts_directory` with the actual path to your scripts.
 
 ### 2. Prepare Data
-The datasets have been pre-processed and are ready to use. You can find them in the `Datasets` folder. All datasets have been enhanced with external variables and decomposed using RobustSTL for an optimized forecasting process. The 'Trend', 'Seasonal', and 'Resid' components have been adjusted to facilitate better model training. Here is a summary of datasets. 
+The datasets have been pre-processed and are ready to use. You can find them in the `Datasets` folder. All datasets have been enhanced with external variables and decomposed using RobustSTL for an optimized forecasting process. The 'Trend', 'Seasonal', and 'Resid' components have been adjusted to facilitate better model training.
 
-
-The datasets are ready to be loaded using the `data_loader.py` script.
-
-
+The datasets are ready to be loaded using the `data_loader.py` script. This script will load the data, apply preprocessing, and save the processed data to the specified output file.To use `data_loader.py`:
+```
+python data_loader.py path_to_your_input_data_file.xlsx path_to_your_output_data_file.xlsx
+```
+Replace path_to_your_input_data_file.xlsx with the path to your input Excel file, and path_to_your_output_data_file.xlsx with the desired path for the output Excel file. 
 
 ### 3. Decomposition with RobustSTL
 Before training the TFT model, the dataset should be pre-processed using the RobustSTL decomposition model. This involves breaking down the 'tourist' column into three components: 'Trend', 'Seasonal', and 'Resid'. These components, when summed, reconstruct the original 'tourist' data. If you are working with your own dataset, please apply the RobustSTL decomposition in this step to prepare your data accordingly.
