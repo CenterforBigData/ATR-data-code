@@ -80,3 +80,6 @@ Within the `forecasting_tutorials` folder, we have included Jupyter Notebooks th
 To gain a clearer and more detailed understanding of the experimental procedure, please refer to the `forecast_tutorial_hawaii_3day.ipynb` file. It contains the full end-to-end process starting from data loading, preprocessing, model training, forecasting, and finally evaluating the performance of the forecasts.
 
 By using these pretrained models, you can achieve the forecast accuracy and results presented in our paper without the need to retrain the models from scratch.
+
+
+![Hawaii Image](https://github.com/CenterforBigData/TPE-RobustSTL-TFT/blob/main/Datasets/pic/Hawaii.png)
