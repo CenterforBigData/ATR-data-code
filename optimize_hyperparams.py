@@ -43,9 +43,17 @@ batch_size = 128
 train_dataloader = training.to_dataloader(train=True, batch_size=batch_size, num_workers=0)
 val_dataloader = validation.to_dataloader(train=False, batch_size=batch_size * 10, num_workers=0)
 
-# Function for hyperparameter optimization using Optuna
+# This section is dedicated to hyperparameter optimization using the Tree-structured Parzen Estimator (TPE) 
+# algorithm within the Optuna framework. TPE is an advanced Bayesian optimization technique that models
+# the probability distribution of hyperparameters and efficiently narrows down the search space.
+# This step, while optional due to its time-consuming nature, is crucial for fine-tuning the model 
+# to achieve optimal performance. For more information on TPE and its workings within Optuna, 
+# you can refer to the official documentation: 
+# https://optuna.readthedocs.io/en/stable/tutorial/10_key_features/003_efficient_optimization_algorithms.html
+
 def optimize_hyperparams(train_dataloader, val_dataloader):
-    # Optuna optimization configurations
+# Initialize the hyperparameter optimization study using Optuna's TPE algorithm
+# to search for the best hyperparameters over a specified number of trials.
     study = optimize_hyperparameters(
         train_dataloader,
         val_dataloader,
