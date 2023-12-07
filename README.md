@@ -3,6 +3,8 @@
 This study introduces an innovative framework that harnesses the most recent Transformer architecture to enhance tourism demand forecasting. The proposed transformer-based model integrates the tree-structured Parzen estimator for hyperparameter optimization, a robust time series decomposition approach, and a temporal fusion transformer for multivariate time series prediction. Our approach initially employs the decomposition method to decompose the data series to effectively mitigate the influence of outliers. The temporal fusion transformer is subsequently utilized for forecasting, and its hyperparameters are meticulously fine-tuned by a Bayesian-based algorithm, culminating in a more efficient and precise model for tourism demand forecasting. Our model surpasses existing state-of-the-art methodologies in terms of forecasting accuracy and robustness.
 
 ## Usage
+### Procedure for using the provide code
+
 ![Tutorial Image](https://github.com/CenterforBigData/TPE-RobustSTL-TFT/blob/main/Datasets/pic/Tutorial.png)
 ### 1. Environment Setup
 Before running the experiments, ensure your environment is set up with all the necessary Python libraries. We recommend using Python 3.7, as the codebase was developed and tested on this version, and compatibility with other versions is not guaranteed. Please be aware that using the code in an environment with a different Python version, such as that in Google Colab, might lead to discrepancies and errors due to differences in the underlying code of the libraries. To install all the required libraries, execute the following command:
