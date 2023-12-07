@@ -5,7 +5,7 @@ This study introduces an innovative framework that harnesses the most recent Tra
 ## Usage
 ![Tutorial Image](https://github.com/CenterforBigData/TPE-RobustSTL-TFT/blob/main/Datasets/pic/Tutorial.png)
 ### 1. Environment Setup
-Before running the experiments, ensure your environment is set up with all the necessary Python libraries. We recommend using Python 3.7, as the codebase was developed and tested on this version, and compatibility with other versions is not guaranteed. To install all the required libraries, execute the following command:
+Before running the experiments, ensure your environment is set up with all the necessary Python libraries. We recommend using Python 3.7, as the codebase was developed and tested on this version, and compatibility with other versions is not guaranteed. Please be aware that using the code in an environment with a different Python version, such as that in Google Colab, might lead to discrepancies and errors due to differences in the underlying code of the libraries. To install all the required libraries, execute the following command:
 
 ```
 pip install -r requirements.txt
