@@ -93,3 +93,11 @@ Within the `forecasting_tutorials` folder, we have included Jupyter Notebooks th
 To gain a clearer and more detailed understanding of the experimental procedure, please refer to the `forecast_tutorial_hawaii_3day.ipynb` file. It contains the full end-to-end process starting from data loading, preprocessing, model training, forecasting, and finally evaluating the performance of the forecasts.
 
 By using these pretrained models, you can achieve the forecast accuracy and results presented in our paper without the need to retrain the models from scratch.
+
+Additionally, we have included three new notebooks utilizing the extended window forecasting strategy for model evaluation on 90 specific time points in the test set. These notebooks are tailored to the Hawaii, Jiuzhaigou, and Siguniangshan datasets:
+
+- `Hawaii_3days_ExtendedWindowForecasting.ipynb`
+- `Jiuzhaigou_3days_ExtendedWindowForecasting.ipynb`
+- `Siguniang_3days_ExtendedWindowForecasting.ipynb`
+
+These notebooks demonstrate the application of the extended forecasting strategy using pretrained models, which are stored in a compressed file named `saved_models.rar`. To run the notebooks, simply extract the contents of `saved_models.rar` and place them in the same directory as the respective `.ipynb` files. This approach allows you to validate the models' performance on the specified test set time points with ease.
